@@ -60,7 +60,6 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<sinatra>, ["~> 1.2.1"])
-      s.add_runtime_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
       s.add_runtime_dependency(%q<dragonfly>, ["~> 0.9.1"])
       s.add_runtime_dependency(%q<addressable>, ["~> 2.2"])
       s.add_runtime_dependency(%q<httparty>, ["~> 0.8.1"])
@@ -73,7 +72,6 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<imagesize>, ["~> 0.1"])
     else
       s.add_dependency(%q<sinatra>, ["~> 1.2.1"])
-      s.add_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
       s.add_dependency(%q<dragonfly>, ["~> 0.9.1"])
       s.add_dependency(%q<addressable>, ["~> 2.2"])
       s.add_dependency(%q<httparty>, ["~> 0.8.1"])
@@ -87,7 +85,6 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<sinatra>, ["~> 1.2.1"])
-    s.add_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
     s.add_dependency(%q<dragonfly>, ["~> 0.9.1"])
     s.add_dependency(%q<addressable>, ["~> 2.2"])
     s.add_dependency(%q<httparty>, ["~> 0.8.1"])

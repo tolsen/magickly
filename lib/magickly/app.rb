@@ -1,7 +1,5 @@
 module Magickly
   class App < Sinatra::Base
-    register Sinatra::Synchrony unless RUBY_VERSION.start_with? '1.8'
-    
     RESERVED_PARAMS = ['src']
     DEMO_IMAGE = 'http://farm4.static.flickr.com/3351/3450592233_c29fde01ef_z.jpg'
     

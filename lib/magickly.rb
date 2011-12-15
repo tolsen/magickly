@@ -3,10 +3,6 @@ require 'active_support/core_ext/object/blank'
 require 'active_support/ordered_hash'
 
 require 'sinatra/base'
-unless RUBY_VERSION.start_with? '1.8'
-  require 'sinatra/synchrony'
-  Sinatra::Synchrony.overload_tcpsocket!
-end
 
 require 'addressable/uri'
 require 'dragonfly'
