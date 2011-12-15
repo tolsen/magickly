@@ -5,7 +5,8 @@ gem 'sinatra-synchrony', '~> 0.2.0', :require => 'sinatra/synchrony', :platforms
 gem 'dragonfly', '~> 0.9.1'
 gem 'addressable', '~> 2.2', :require => 'addressable/uri'
 
-gem 'httparty', '~> 0.7.3'
+gem 'httparty', '~> 0.8.1'
+
 gem 'activesupport', '>= 2.0.0', :require => false
 
 group :development do

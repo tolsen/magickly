@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aidan Feldman"]
-  s.date = "2011-09-05"
+  s.date = "2011-12-15"
   s.description = "A service for image manipulation - built as an extensible wrapper of Imagemagick which handles caching, c/o the Dragonfly gem."
   s.email = "aidan.feldman@gmail.com"
   s.extra_rdoc_files = [
@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "config.ru",
-    "lib/dragonfly/app.rb",
     "lib/dragonfly/data_storage/remote_data_store.rb",
     "lib/images/lomo_mask.png",
     "lib/magickly.rb",
@@ -64,7 +63,7 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
       s.add_runtime_dependency(%q<dragonfly>, ["~> 0.9.1"])
       s.add_runtime_dependency(%q<addressable>, ["~> 2.2"])
-      s.add_runtime_dependency(%q<httparty>, ["~> 0.7.3"])
+      s.add_runtime_dependency(%q<httparty>, ["~> 0.8.1"])
       s.add_runtime_dependency(%q<activesupport>, [">= 2.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
@@ -77,7 +76,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
       s.add_dependency(%q<dragonfly>, ["~> 0.9.1"])
       s.add_dependency(%q<addressable>, ["~> 2.2"])
-      s.add_dependency(%q<httparty>, ["~> 0.7.3"])
+      s.add_dependency(%q<httparty>, ["~> 0.8.1"])
       s.add_dependency(%q<activesupport>, [">= 2.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5"])
       s.add_dependency(%q<rcov>, [">= 0"])
@@ -91,7 +90,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<sinatra-synchrony>, ["~> 0.2.0"])
     s.add_dependency(%q<dragonfly>, ["~> 0.9.1"])
     s.add_dependency(%q<addressable>, ["~> 2.2"])
-    s.add_dependency(%q<httparty>, ["~> 0.7.3"])
+    s.add_dependency(%q<httparty>, ["~> 0.8.1"])
     s.add_dependency(%q<activesupport>, [">= 2.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5"])
     s.add_dependency(%q<rcov>, [">= 0"])
