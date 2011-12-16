@@ -22,6 +22,7 @@ module Magickly
       Magickly.dragonfly.datastore.configure do |d|
         # pass cookies to subsequent request
         d.cookie_str = request.env["rack.request.cookie_string"]
+        d.request_url = request.url
       end
       
       # parse query params so they are ordered

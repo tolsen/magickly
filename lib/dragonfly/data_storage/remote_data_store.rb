@@ -8,6 +8,7 @@ module Dragonfly
       include Configurable
       
       configurable_attr :cookie_str
+      configurable_attr :request_url
       
       def store(temp_object, opts={})
         raise "Sorry friend, this datastore is read-only."
