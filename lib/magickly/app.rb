@@ -23,7 +23,9 @@ module Magickly
       process_src_or_display_demo params[:src], @options
     end
 
-    get '/q/*' do 
+    get '/q/*' do
+      puts "HELLO STDOUT"
+      warn "HELLO STDERR"
       src = nil
       opts = ActiveSupport::OrderedHash.new
       splat = request.path_info.sub /^\/q\//, ''
