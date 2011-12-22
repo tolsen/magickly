@@ -37,6 +37,7 @@ module Magickly
 
       Rails.logger.error "path_info: #{request.path_info}"
       Rails.logger.error "splat: #{splat}"
+      Rails.logger.error "src: #{src}"
       
       process_src_or_display_demo src, opts
     end
