@@ -20,6 +20,7 @@ module Magickly
     end
     
     get '/' do
+      Rails.logger.error "src: #{params[:src]}"
       process_src_or_display_demo params[:src], @options
     end
 
