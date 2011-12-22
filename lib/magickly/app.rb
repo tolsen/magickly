@@ -10,7 +10,7 @@ module Magickly
     configure :production do
       require 'newrelic_rpm' if ENV['NEW_RELIC_ID']
     end
-    
+
     before do
       @options = ActiveSupport::OrderedHash.new
       request.query_string.split('&').each do |e|
@@ -24,8 +24,6 @@ module Magickly
     end
 
     get '/q/*' do
-      puts "HELLO STDOUT"
-      warn "HELLO STDERR"
       src = nil
       opts = ActiveSupport::OrderedHash.new
       splat = request.path_info.sub /^\/q\//, ''
@@ -36,6 +34,10 @@ module Magickly
           opts[k] = URI.unescape(v)
         end
       end
+
+      Rails.logger.error "path_info: #{request.path_info}"
+      Rails.logger.error "splat: #{splat}"
+      
       process_src_or_display_demo src, opts
     end
     
