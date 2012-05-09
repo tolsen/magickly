@@ -37,12 +37,14 @@ module Magickly
     
     def process_image(image, options={})
 
-      skipped_options = {}
+      # Always auto-orient and process it separately as it
+      # makes it hard to keep track of dimensions
+      loner_options = { auto_orient: 'true' }
 
       convert = options.inject(nil) do |prev, (k, v)|
         factory = Magickly.get_convert_factory k.to_sym
         if factory.nil?
-          skipped_options[k] = v
+          loner_options[k] = v
           prev
         else
           factory.new_convert(image, v, prev)
@@ -52,7 +54,7 @@ module Magickly
       image = convert.nil? ? image : convert.execute
 
       # Handle any remaining options not handled by single convert
-      skipped_options.each do |method, val|
+      loner_options.each do |method, val|
         method = method.to_sym
         if Magickly.dragonfly.processor_methods.include?(method)
           if val == 'true'
